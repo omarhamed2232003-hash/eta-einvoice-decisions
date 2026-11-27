@@ -385,9 +385,9 @@
       ],
       "primary_source_id": "src-einv-0386-2020",
       "verification": {
-        "level": "official_summary",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Effective date taken from ETA's official Phase 1 & 2 presentation (slide 4). The decision PDF itself was not read: it is a 31.9 MB scan and the download did not complete."
+        "notes": "نص القرار قُرئ من ملف المصلحة الرسمي (9 صفحات، ممسوح ضوئيًا): أربع مواد. المادة الأولى تُلزم الشركات الـ134 الواردة بالبيان المرفق والمسجلة بمركز كبار الممولين (كمرحلة أولى) بإصدار فواتير إلكترونية اعتبارًا من 2020/11/15. المادة الثانية تسرد الشروط الفنية (شهادة توقيع إلكتروني، ترميز GS1 أو GPC، التسجيل برقم التسجيل الضريبي والبريد الإلكتروني، التكامل مع ERP). المادة الثالثة تمنع غير المذكورين من استخدام المنظومة قبل استيفاء الشروط. المادة الرابعة: يعمل به من تاريخ صدوره. القرار يستند صراحة إلى قرار وزير المالية 188/2020. لم يُطبع تاريخ إصدار على نص القرار، لذلك issued_on = null، والتاريخ المسجل هو تاريخ بدء الالتزام من المادة الأولى."
       }
     },
     {
@@ -412,9 +412,9 @@
       ],
       "primary_source_id": "src-einv-0518-2020",
       "verification": {
-        "level": "official_summary",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Effective date taken from ETA's official Phase 1 & 2 presentation (slide 4). The decision PDF itself was not read: it is a 25.7 MB scan and the download did not complete."
+        "notes": "نص القرار قُرئ من ملف المصلحة الرسمي (12 صفحة، ممسوح ضوئيًا). المادة الأولى تُلزم الشركات الـ347 الواردة بالبيان المرفق والمسجلة بمركز كبار الممولين (كمرحلة ثانية) بإصدار فواتير إلكترونية اعتبارًا من 2021/2/15. القرار يستند إلى قرار 188/2020 وإلى قرار 386/2020 الخاص بالمرحلة الأولى، ويسرد في ديباجته قانون الإجراءات الضريبية الموحد 206/2020. لم يُطبع تاريخ إصدار على الصفحة الأولى، لذلك issued_on = null."
       }
     },
     {
