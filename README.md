@@ -154,6 +154,10 @@ npm run build:csv    # إعادة بناء CSV
 - العناوين العربية لقرارات الإيصال الإلكتروني منقولة كما وردت في صفحة المصلحة؛ الترجمة الإنجليزية غير متوفرة لها بعد (`title_en: null`).
 - نصوص القرارات نفسها ملك لجهات إصدارها؛ هذا المشروع يوثّقها ويشير إليها ولا يعيد نشرها.
 
+## جزء من مجموعة
+
+هذا المستودع مستقل عن أدوات الأسئلة ([thanaweya-mcq-kit](https://github.com/omarhamed2232003-hash/thanaweya-mcq-kit)، [mcq-bank-lint](https://github.com/omarhamed2232003-hash/mcq-bank-lint)، [mcq-bank-diff](https://github.com/omarhamed2232003-hash/mcq-bank-diff)، [mcq-exam-paper](https://github.com/omarhamed2232003-hash/mcq-exam-paper)، [arabic-text-tools](https://github.com/omarhamed2232003-hash/arabic-text-tools)) في الموضوع، لكنه يتبع نفس القاعدتين: كل قيمة في البيانات تعود إلى مستند رسمي، ولا يُكتب تاريخ لم يُقرأ من مستند (`verification.level` يقول كيف أُثبت كل حقل).
+
 ## الترخيص
 
 - الكود والسكربتات: MIT — [LICENSE](LICENSE).

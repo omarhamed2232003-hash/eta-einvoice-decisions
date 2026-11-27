@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.10.4
+
+- README: added the "جزء من مجموعة" section, which says plainly that this
+  dataset is a different subject from the question-bank tools and shares only
+  their two rules: every value traces to an official document, and no date is
+  written that was not read from one.
+
 ## 0.10.3
 
 - `test/docs-links.test.js`: every relative link in the documentation must point
