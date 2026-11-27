@@ -22,7 +22,7 @@ filters for list:
   --system einvoice|ereceipt   --year 2024        --issuer minister_of_finance
   --verification document_read|official_summary|listing_only
   --effective-before 2022-01-01   --q "نص للبحث"
-  --lang ar|en (text output)      --json
+  --lang ar|en (text output)      --json      --format csv
 
 examples:
   eta-decisions list --system ereceipt --year 2023
@@ -45,6 +45,15 @@ const value = (name) => {
 const has = (name) => rest.includes(name);
 
 const json = has('--json');
+const format = value('--format') ?? (json ? 'json' : 'text');
+if (!['text', 'json', 'csv'].includes(format)) {
+  console.error(`--format must be text, json or csv, not ${format}`);
+  process.exit(2);
+}
+if (format === 'csv' && command !== 'list') {
+  console.error('--format csv applies to list');
+  process.exit(2);
+}
 const lang = value('--lang') ?? 'ar';
 if (lang !== 'ar' && lang !== 'en') {
   console.error(`--lang must be ar or en, not ${lang}`);
@@ -54,7 +63,26 @@ if (lang !== 'ar' && lang !== 'en') {
 const title = (row) => (lang === 'en' ? (row.title_en ?? row.title_ar) : row.title_ar);
 const label = (row) => `${row.number}/${row.year}`;
 
+const csvCell = (value) => {
+  const text = value === null || value === undefined ? '' : String(value);
+  return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+};
+
+const CSV_COLUMNS = [
+  'id', 'number', 'year', 'system', 'issuer', 'issued_on', 'effective_from',
+  'verification_level', 'checked_on', 'title_ar', 'title_en', 'primary_source_id',
+];
+
+const csvRow = (row) => [
+  row.id, row.number, row.year, row.system, row.issuer, row.issued_on, row.effective_from,
+  row.verification?.level, row.verification?.checked_on, row.title_ar, row.title_en, row.primary_source_id,
+].map(csvCell).join(',');
+
 const emit = (rows) => {
+  if (format === 'csv') {
+    console.log([CSV_COLUMNS.join(','), ...rows.map(csvRow)].join('\n'));
+    return;
+  }
   if (json) {
     console.log(JSON.stringify(rows, null, 2));
     return;

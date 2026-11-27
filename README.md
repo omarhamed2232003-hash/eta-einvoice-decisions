@@ -110,6 +110,14 @@ node bin/eta-decisions.js stats
 
 `data/decisions.csv` هو نفس المحتوى بصيغة جدولية، ويُبنى من JSON بـ `npm run build:csv` (الاختبارات تفشل إذا كان الملف غير متزامن).
 
+### تصدير CSV
+
+```bash
+node bin/eta-decisions.js list --system einvoice --format csv > einvoice.csv
+```
+
+الملف يبدأ بصف عناوين ثابت (id, number, year, system, issuer, issued_on, effective_from, verification_level, checked_on, title_ar, title_en, primary_source_id)، وأي حقل فيه فاصلة أو سطر جديد يُحاط بعلامات تنصيص حسب RFC 4180. يعمل مع بقية مرشّحات `list`.
+
 ## بنية المشروع
 
 ```

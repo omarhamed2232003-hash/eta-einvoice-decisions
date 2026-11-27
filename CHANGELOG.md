@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.10.0
+
+- `list --format csv`: the filtered list as RFC 4180 CSV with a fixed header
+  (id, number, year, system, issuer, issued_on, effective_from,
+  verification_level, checked_on, title_ar, title_en, primary_source_id), so
+  the dataset opens in a spreadsheet without a separate script. Works with the
+  same filters as the text output.
+- Tests 23/23, including quote balancing over the whole file and the refusal of
+  `--format csv` on a command that does not list.
 ## 0.9.1
 
 - `RELEASE_CHECKLIST.md`: what has to happen before the first tag, split into
