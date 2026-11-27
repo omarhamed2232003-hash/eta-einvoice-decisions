@@ -1,13 +1,13 @@
 {
   "name": "eta-einvoice-decisions",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Dated, sourced dataset of Egyptian Tax Authority e-invoice and e-receipt decisions. Informational reference, not tax or legal advice.",
   "type": "module",
   "license": "MIT",
   "scripts": {
     "validate": "node scripts/validate.mjs",
     "build:csv": "node scripts/build-csv.mjs",
-    "test": "node --test test/dataset.test.js",
+    "test": "node --test test/*.test.js",
     "build:timeline": "node scripts/build-timeline.mjs"
   },
   "keywords": [
@@ -21,5 +21,8 @@
   ],
   "engines": {
     "node": ">=18"
+  },
+  "bin": {
+    "eta-decisions": "bin/eta-decisions.js"
   }
 }

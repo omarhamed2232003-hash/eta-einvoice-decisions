@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.9.0
+
+- `bin/eta-decisions.js`: a read-only query tool over the dataset, so the
+  decisions are usable without opening the JSON. `list` with filters
+  (`--system`, `--year`, `--issuer`, `--verification`, `--effective-before`,
+  `--q`, `--limit`), `show <id>` for one decision in full, `stats` for counts
+  by system, year and verification level; `--json` and `--lang ar|en`.
+- Exit codes are deliberate: 0 for a successful query even with no matches,
+  1 when `show` cannot find the id, 2 for bad usage. A missing date prints as
+  `----------` rather than being guessed.
+- Tests: 9 new CLI tests (18 total), covering each filter against what the data
+  actually holds, the JSON output, the empty result, `show`, `stats` totals and
+  the usage errors.
 ## 0.8.0
 
 - Add `docs/GLOSSARY.md`: every data field and the terms that repeat across the

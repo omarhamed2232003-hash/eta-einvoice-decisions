@@ -91,6 +91,23 @@ jq -r '.decisions[] | select(.verification.level == "listing_only") | .title_ar'
 jq -r '.sources[] | "\(.id)\t\(.url)"' data/decisions.json
 ```
 
+## الاستعلام من سطر الأوامر
+
+`bin/eta-decisions.js` يقرأ `data/decisions.json` ويطبع نتائج فقط، ولا يعدّل شيئًا:
+
+```bash
+node bin/eta-decisions.js list                          # كل القرارات
+node bin/eta-decisions.js list --system ereceipt --year 2023
+node bin/eta-decisions.js list --effective-before 2022-01-01 --lang en
+node bin/eta-decisions.js list --q "الفاتورة الضريبية" --json
+node bin/eta-decisions.js show eta-einv-0188-2020
+node bin/eta-decisions.js stats
+```
+
+الفلاتر: `--system einvoice|ereceipt`، `--year`، `--issuer`، `--verification`، `--effective-before`، `--q`، `--limit`، إضافة إلى `--json` و`--lang ar|en`. أمر `show` يطبع قرارًا واحدًا كاملًا، و`stats` يعطي أعدادًا حسب النظام والسنة ومستوى التحقق.
+
+رموز الخروج: `0` لاستعلام ناجح (حتى لو لم يطابق شيئًا)، `1` عندما لا يجد `show` المعرّف، `2` عند خطأ في الاستخدام. التاريخ الناقص يظهر كـ `----------` بدل تخمينه.
+
 `data/decisions.csv` هو نفس المحتوى بصيغة جدولية، ويُبنى من JSON بـ `npm run build:csv` (الاختبارات تفشل إذا كان الملف غير متزامن).
 
 ## بنية المشروع
@@ -101,6 +118,7 @@ data/decisions.csv      نفس البيانات للجداول
 schema/decision.schema.json   مخطط JSON Schema للصف والملف
 scripts/validate.mjs    المدقق: يفرض قواعد المصدر والتاريخ ومستويات التحقق
 scripts/build-csv.mjs   بناء CSV والتحقق من تزامنه
+bin/eta-decisions.js    استعلام من سطر الأوامر (قراءة فقط)
 docs/METHODOLOGY.md     معايير الإدراج والتحقق وحدود البيانات
 docs/SOURCES.md         صفحات المصدر الرسمية
 test/dataset.test.js    اختبارات على البيانات نفسها
