@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.10.2
+
+- The dataset rules moved out of `scripts/validate.mjs` into `src/validate.js`
+  as `validateDataset(data)`, so they can be tested against broken fixtures
+  without a file on disk. The script now only reads, prints and sets the exit
+  code, and it accepts an optional path argument.
+- Tests 69/69: every rule in the validator now has a fixture that breaks it —
+  dataset fields, source hosts, the gazette source type, id patterns, duplicate
+  ids, dates, phases, source references, verification levels and the effective
+  schedule — plus a test that the real dataset is clean.
 ## 0.10.1
 
 - `--version` on the CLI, alongside the existing `--help`.
