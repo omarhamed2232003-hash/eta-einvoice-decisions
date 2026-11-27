@@ -46,16 +46,27 @@
       "required": ["id", "type", "publisher", "title_ar", "url", "retrieved_on"],
       "properties": {
         "id": { "type": "string", "pattern": "^src-[a-z0-9-]+$" },
-        "type": { "enum": ["official_web_page", "official_pdf", "official_news"] },
+        "type": { "enum": ["official_web_page", "official_pdf", "official_news", "official_gazette"] },
         "publisher": { "type": "string" },
         "title_ar": { "type": "string", "minLength": 3 },
         "title_en": { "type": ["string", "null"] },
         "url": {
           "type": "string",
-          "pattern": "^https://([a-z0-9-]+\\.)*eta\\.gov\\.eg/",
-          "description": "Official sources must live on eta.gov.eg."
+          "pattern": "^https://",
+          "description": "Official sources live on eta.gov.eg. An official_gazette source may sit on another host, but must carry gazette.issue, gazette.published_on and host_note_ar."
         },
-        "retrieved_on": { "$ref": "#/$defs/isoDate" }
+        "retrieved_on": { "$ref": "#/$defs/isoDate" },
+        "gazette": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["issue", "published_on"],
+          "properties": {
+            "issue": { "type": "string", "minLength": 1 },
+            "published_on": { "$ref": "#/$defs/isoDate" }
+          }
+        },
+        "host_note_ar": { "type": "string", "minLength": 10 },
+        "host_note_en": { "type": ["string", "null"] }
       }
     },
     "phase": {

@@ -57,3 +57,10 @@ test('the e-invoice mandate phases are complete and in order', () => {
     .sort((a, b) => a - b);
   assert.deepEqual(phases, [1, 2, 3, 5, 6, 8]);
 });
+
+test('every source in the file is used by at least one decision', () => {
+  const used = new Set();
+  data.decisions.forEach((row) => row.source_ids.forEach((id) => used.add(id)));
+  const orphans = data.sources.filter((source) => !used.has(source.id)).map((source) => source.id);
+  assert.deepEqual(orphans, []);
+});
