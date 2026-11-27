@@ -26,7 +26,7 @@ A dated, sourced dataset of Egyptian Tax Authority e-invoice and e-receipt decis
 
 قاعدة صارمة يفرضها المدقق: **لا صف يحمل تاريخ سريان إلا إذا كان مستواه `document_read` أو `official_summary`.** أي حقل لم يُتحقق منه يبقى `null`، ولا يُخمَّن أبدًا.
 
-تغطية الصفحتين الرسميتين ملفًا بملف موجودة في [`docs/COVERAGE.md`](docs/COVERAGE.md).
+تغطية الصفحتين الرسميتين ملفًا بملف موجودة في [`docs/COVERAGE.md، `docs/TIMELINE.md` (خط زمني مُولَّد)`](docs/COVERAGE.md).
 
 ### قرار 188/2020 ونص الوقائع المصرية
 

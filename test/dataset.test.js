@@ -64,3 +64,10 @@ test('every source in the file is used by at least one decision', () => {
   const orphans = data.sources.filter((source) => !used.has(source.id)).map((source) => source.id);
   assert.deepEqual(orphans, []);
 });
+
+test('docs/TIMELINE.md matches the dataset', async () => {
+  const { buildTimeline } = await import('../scripts/build-timeline.mjs');
+  const { readFileSync } = await import('node:fs');
+  const committed = readFileSync(new URL('../docs/TIMELINE.md', import.meta.url), 'utf8');
+  assert.equal(committed, buildTimeline(), 'run npm run build:timeline');
+});

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.0
+
+- Add `docs/TIMELINE.md`, generated from `data/decisions.json` by
+  `npm run build:timeline` and checked by a test so it cannot drift.
 ## 0.6.0 — 2026-11-27
 
 - استرجاع قرار وزير المالية 38/2024: ملف المصلحة تالف (PDF ينتهي بصفحة HTML)، فأُصلح محليًا بأداة `mutool clean` ثم استُخرج نصه المطبوع.
