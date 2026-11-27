@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.9.1
+
+- `RELEASE_CHECKLIST.md`: what has to happen before the first tag, split into
+  before, at, and after, with the repository-specific gates underneath.
+- `docs/RELEASE_NOTES_DRAFT.md`: draft first-release notes for Omar to read
+  next to the README, including a plain "what it does not do" section. Draft
+  only: nothing is tagged or published.
 ## 0.9.0
 
 - `bin/eta-decisions.js`: a read-only query tool over the dataset, so the
