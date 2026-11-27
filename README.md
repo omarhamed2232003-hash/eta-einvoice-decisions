@@ -136,3 +136,5 @@ npm run build:csv    # إعادة بناء CSV
 ## English summary
 
 A machine-readable dataset of ETA e-invoice and e-receipt mandate decisions: decision number, year, issuer, scope, effective date and the official source URL for each row, plus a `verification.level` that states exactly how each field was established. 32 rows compiled on 2026-11-27 from ETA's two official decision pages. Rows never carry a date that was not read from an official document; unverified fields stay null. `npm run validate` enforces this. MIT for code, CC BY 4.0 for the data. Not tax or legal advice.
+
+`docs/GLOSSARY.md`: شرح عربي لكل حقل في البيانات وللمصطلحات المتكررة في القرارات.

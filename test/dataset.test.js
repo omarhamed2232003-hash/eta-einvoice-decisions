@@ -71,3 +71,12 @@ test('docs/TIMELINE.md matches the dataset', async () => {
   const committed = readFileSync(new URL('../docs/TIMELINE.md', import.meta.url), 'utf8');
   assert.equal(committed, buildTimeline(), 'run npm run build:timeline');
 });
+
+test('every data field is documented in the glossary', async () => {
+  const { readFileSync } = await import('node:fs');
+  const glossary = readFileSync(new URL('../docs/GLOSSARY.md', import.meta.url), 'utf8');
+  const documented = new Set([...glossary.matchAll(/`([a-z_]+)`/g)].map((match) => match[1]));
+  const fields = new Set(data.decisions.flatMap((row) => Object.keys(row)));
+  const missing = [...fields].filter((field) => !documented.has(field));
+  assert.deepEqual(missing, [], `undocumented fields: ${missing.join(', ')}`);
+});

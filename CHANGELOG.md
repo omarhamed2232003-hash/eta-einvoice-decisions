@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.0
+
+- Add `docs/GLOSSARY.md`: every data field and the terms that repeat across the
+  decisions, in Arabic, with a note that the decision text wins over the summary.
+- Add a test that fails when a field appears in the data without being
+  documented. It immediately found one: `effective_schedule`, the per-governorate
+  schedule used by 323/2022, which is now documented.
 ## 0.7.0
 
 - Add `docs/TIMELINE.md`, generated from `data/decisions.json` by
