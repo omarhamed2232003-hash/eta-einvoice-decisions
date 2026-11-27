@@ -1,6 +1,6 @@
 {
   "name": "eta-einvoice-decisions",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Dated, sourced dataset of Egyptian Tax Authority e-invoice and e-receipt decisions. Informational reference, not tax or legal advice.",
   "type": "module",
   "license": "MIT",

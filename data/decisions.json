@@ -852,10 +852,10 @@
       "issuer": "minister_of_finance",
       "title_ar": "قرار وزير المالية رقم 38 لسنة 2024 بشأن استبدال بعض نصوص مواد قرار 230 لسنة 2022",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
-      "issued_on": null,
-      "effective_from": null,
+      "scope_ar": "يستبدل المراحل الفرعية الثالثة والرابعة والخامسة من المرحلة الرابعة (القاهرة الكبرى والإسكندرية) والمرحلة الخامسة (باقي المحافظات) في جدول قرار 230/2022، ويضيف المراحل السادسة إلى التاسعة بمراحلها الفرعية، بقطاعات ومحافظات محددة لكل مرحلة.",
+      "scope_en": "Replaces sub-phases 3, 4 and 5 of phase 4 (Greater Cairo and Alexandria) and phase 5 (rest of the governorates) in the 230/2022 schedule, and adds phases 6 to 9 with their sub-phases, each with named sectors and governorates.",
+      "issued_on": "2024-01-30",
+      "effective_from": "2024-02-01",
       "phase": {
         "main": null,
         "sub": null
@@ -866,10 +866,72 @@
       ],
       "primary_source_id": "src-erec-38-2024",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page, but the linked PDF is a corrupted file: it is 555 KB and ends with an HTML error page, so no PDF reader can open it. The decision text could not be read, so no issue date, effective date or scope is recorded. Re-check the link before relying on this row."
-      }
+        "notes": "ملف المصلحة الرسمي لهذا القرار تالف: PDF ينتهي بصفحة HTML، فلا يفتح. أُصلح الملف محليًا بأداة mutool (mutool clean) ثم استُخرج النص، وهو نص مطبوع لا صورة، وطوبق على عنوان العدد: الوقائع المصرية العدد 24 تابع (ب) في 30 يناير 2024، صدر في 2024/1/30 بتوقيع وزير المالية د. محمد معيط. المادة الثالثة: يُنشر في الوقائع المصرية ويُعمل به من اليوم التالي لتاريخ نشره (أي 31 يناير 2024)، ويلغي ما يخالف أحكامه. التاريخ المسجل في effective_from هو أول تاريخ إلزام في الجدول (1 فبراير 2024) لا تاريخ العمل بالقرار نفسه، اتساقًا مع بقية الصفوف. الجدول كامل في effective_schedule. القرارات اللاحقة 396/2024 و455/2024 و123/2025 و225/2025 و281/2025 و361/2025 تحمل تواريخ المراحل اللاحقة بنفسها."
+      },
+      "effective_schedule": [
+        {
+          "from": "2024-02-01",
+          "scope_ar": "المرحلة الرابعة، الفرعية الثالثة: سلاسل المحلات والمحلات داخل المراكز التجارية ومحلات تطبيقات المحمول في شرق القاهرة ومدينتي السادس من أكتوبر والشيخ زايد.",
+          "scope_en": "Phase 4, sub-phase 3: retail chains, shops inside malls and mobile-app shops in East Cairo, 6th of October and Sheikh Zayed."
+        },
+        {
+          "from": "2024-05-15",
+          "scope_ar": "المرحلة الرابعة، الفرعية الرابعة: باقي مناطق محافظات القاهرة الكبرى.",
+          "scope_en": "Phase 4, sub-phase 4: the rest of Greater Cairo."
+        },
+        {
+          "from": "2024-07-15",
+          "scope_ar": "المرحلة الرابعة، الفرعية الخامسة: باقي محافظات الجمهورية.",
+          "scope_en": "Phase 4, sub-phase 5: the rest of the governorates."
+        },
+        {
+          "from": "2024-09-15",
+          "scope_ar": "المرحلة الخامسة: قطاعات الثقافة والترفيه والتعليم بكل المحافظات.",
+          "scope_en": "Phase 5: culture, entertainment and education sectors nationwide."
+        },
+        {
+          "from": "2024-11-15",
+          "scope_ar": "المرحلة السادسة، الفرعية الأولى: المطاعم والكافيهات خارج المراكز التجارية وخارج نطاق السلاسل بالقاهرة الكبرى والإسكندرية.",
+          "scope_en": "Phase 6, sub-phase 1: restaurants and cafes outside malls and outside retail chains in Greater Cairo and Alexandria."
+        },
+        {
+          "from": "2025-01-15",
+          "scope_ar": "المرحلة السادسة، الفرعية الثانية: المطاعم والكافيهات بالقطاعات نفسها في باقي المحافظات.",
+          "scope_en": "Phase 6, sub-phase 2: restaurants and cafes in the rest of the governorates."
+        },
+        {
+          "from": "2025-03-15",
+          "scope_ar": "المرحلة السابعة، الفرعية الأولى: قطاعات الصحة والعناية الشخصية والاتصالات بالقاهرة الكبرى والإسكندرية.",
+          "scope_en": "Phase 7, sub-phase 1: health, personal care and telecoms in Greater Cairo and Alexandria."
+        },
+        {
+          "from": "2025-05-15",
+          "scope_ar": "المرحلة السابعة، الفرعية الثانية: القطاعات نفسها في باقي المحافظات.",
+          "scope_en": "Phase 7, sub-phase 2: the same sectors in the rest of the governorates."
+        },
+        {
+          "from": "2025-07-15",
+          "scope_ar": "المرحلة الثامنة، الفرعية الأولى: النقل بتطبيقات إلكترونية والصيانة والنظافة بالقاهرة الكبرى والإسكندرية.",
+          "scope_en": "Phase 8, sub-phase 1: app-based transport, maintenance and cleaning in Greater Cairo and Alexandria."
+        },
+        {
+          "from": "2025-09-15",
+          "scope_ar": "المرحلة الثامنة، الفرعية الثانية: القطاعات نفسها في باقي المحافظات.",
+          "scope_en": "Phase 8, sub-phase 2: the same sectors in the rest of the governorates."
+        },
+        {
+          "from": "2025-11-15",
+          "scope_ar": "المرحلة التاسعة، الفرعية الأولى: السوبر ماركت وأنشطة أخرى بالقاهرة الكبرى والإسكندرية.",
+          "scope_en": "Phase 9, sub-phase 1: supermarkets and other activities in Greater Cairo and Alexandria."
+        },
+        {
+          "from": "2025-12-31",
+          "scope_ar": "المرحلة التاسعة، الفرعية الثانية: القطاع نفسه في باقي المحافظات.",
+          "scope_en": "Phase 9, sub-phase 2: the same sector in the rest of the governorates."
+        }
+      ]
     },
     {
       "id": "eta-erec-0139-2024",
