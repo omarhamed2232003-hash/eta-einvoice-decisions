@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.10.5
+
+- `test/docs-truth.test.js`: the suite now fails if any document outside the
+  changelog and the review findings states a test count. A count written into
+  prose goes stale the next time a test is added, and a stale number in a release
+  checklist is a claim nobody rechecks.
+- RELEASE_CHECKLIST.md: the test-count line no longer carries a number; it says
+  `npm test` passes and that the CI log is the authority.
+
 ## 0.10.4
 
 - README: added the "جزء من مجموعة" section, which says plainly that this

@@ -27,5 +27,5 @@
 - [ ] The read-through date in the README and `docs/SOURCES.md` matches the data (27 November 2026), and the release notes carry it.
 - [ ] "Not tax or legal advice" and "not affiliated with the Authority" are in the release notes and the README.
 - [ ] Every row's verification level is still `document_read`; if any row regresses, the level must change with it.
-- [ ] `npm test` covers the schema rules, the source-per-row check, the coverage table and the timeline drift check (18 tests).
+- [ ] `npm test` covers the schema rules, the source-per-row check, the coverage table and the timeline drift check (the count in the CI log is the authority; do not write one here).
 - [ ] The CSV generator still runs, so a reader can take the data into a spreadsheet.
