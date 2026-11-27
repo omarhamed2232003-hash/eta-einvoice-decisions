@@ -318,6 +318,21 @@
       "title_en": null,
       "url": "https://eta.gov.eg/sites/default/files/2025-09/karar-361-2025-e.reciept-phase9-wave1.pdf",
       "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-waqae-188-2020",
+      "type": "official_gazette",
+      "publisher": "الهيئة العامة لشئون المطبوعات الأميرية — الوقائع المصرية",
+      "title_ar": "الوقائع المصرية — العدد 72 (تابع) — 26 مارس 2020 — قرار وزير المالية رقم 188 لسنة 2020",
+      "title_en": "Official Gazette issue 72 (continued), 26 March 2020 — Minister of Finance Decision 188/2020",
+      "url": "https://www.elwatannews.com/data/iframe/pdf/12406271071585579395.pdf",
+      "retrieved_on": "2026-11-27",
+      "gazette": {
+        "issue": "72 (تابع)",
+        "published_on": "2020-03-26"
+      },
+      "host_note_ar": "نسخة مصورة من عدد الوقائع المصرية نفسه منشورة على موقع الوطن (elwatannews.com) وليست على موقع المصلحة؛ نص القرار في الصفحة 2 من العدد.",
+      "host_note_en": "A scan of the Official Gazette issue itself, hosted by elwatannews.com rather than by ETA. The decision text is on page 2."
     }
   ],
   "decisions": [
@@ -329,22 +344,23 @@
       "issuer": "minister_of_finance",
       "title_ar": "قرار وزير المالية رقم 188 لسنة 2020 بتطبيق منظومة الفاتورة الضريبية الإلكترونية",
       "title_en": "Minister of Finance Decision 188/2020: applying the electronic tax invoice system",
-      "scope_ar": "المجتمع الضريبي ككل؛ الأساس القانوني الذي تستند إليه قرارات المراحل التالية.",
-      "scope_en": "The tax community as a whole; the legal basis cited by every phase decision below.",
-      "issued_on": null,
-      "effective_from": null,
+      "scope_ar": "كل المسجلين في ضريبة القيمة المضافة: إلزام بإصدار فواتير ضريبية إلكترونية تحمل التوقيع الإلكتروني لمُصدِرها والكود الموحد للسلعة أو الخدمة المعتمد من المصلحة (المادة الأولى). الضوابط الفنية ومراحل التطبيق تصدر بقرار من رئيس المصلحة (المادة الثانية).",
+      "scope_en": "All VAT-registered taxpayers: e-invoices must carry the issuer's electronic signature and the unified commodity/service code approved by ETA (Article 1). The technical rules and rollout phases are set by a separate decision of the ETA head (Article 2).",
+      "issued_on": "2020-03-26",
+      "effective_from": "2020-03-27",
       "phase": {
         "main": null,
         "sub": null
       },
       "source_ids": [
+        "src-waqae-188-2020",
         "src-pres-phase-1-2"
       ],
-      "primary_source_id": "src-pres-phase-1-2",
+      "primary_source_id": "src-waqae-188-2020",
       "verification": {
-        "level": "referenced",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Referenced in ETA's official Phase 1 & 2 presentation and cited as a legal basis inside decisions 208/2022 and 323/2022. The decision text itself has not been retrieved yet, so no date is recorded."
+        "notes": "نص القرار قُرئ من صورة عدد الوقائع المصرية (العدد 72 تابع، 26 مارس 2020)، صفحة 2: ثلاث مواد، صدر في 2020/3/26 بتوقيع وزير المالية د. محمد معيط. المادة الثالثة: يُنشر القرار في الوقائع المصرية ويُعمل به من اليوم التالي لتاريخ نشره، فأُخذ تاريخ السريان 2020-03-27. ملاحظة: صحف 30 مارس 2020 ذكرت أن القرار نُشر في عدد الوقائع الصادر في ذلك اليوم؛ تاريخ العدد نفسه في الصورة هو 26 مارس 2020، وهذا ما اعتُمد."
       }
     },
     {

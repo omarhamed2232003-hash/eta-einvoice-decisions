@@ -17,12 +17,17 @@ test('the committed CSV is in sync with the JSON', () => {
   assert.match(output, /in sync/);
 });
 
-test('every decision cites an official eta.gov.eg source', () => {
+test('every decision cites an official source (eta.gov.eg or the Official Gazette)', () => {
   const byId = new Map(data.sources.map((source) => [source.id, source]));
   data.decisions.forEach((row) => {
     const primary = byId.get(row.primary_source_id);
     assert.ok(primary, row.id);
-    assert.ok(primary.url.startsWith('https://eta.gov.eg/'), `${row.id} source host`);
+    if (primary.type === 'official_gazette') {
+      assert.ok(primary.gazette?.published_on, `${row.id} gazette date`);
+      assert.ok(primary.host_note_ar, `${row.id} gazette host note`);
+    } else {
+      assert.ok(primary.url.startsWith('https://eta.gov.eg/'), `${row.id} source host`);
+    }
   });
 });
 

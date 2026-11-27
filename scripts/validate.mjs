@@ -44,14 +44,28 @@ for (const [index, source] of (data.sources ?? []).entries()) {
   if (!source.id) fail(at, 'missing id');
   if (sourceIds.has(source.id)) fail(at, `duplicate source id ${source.id}`);
   sourceIds.add(source.id);
-  if (!['official_web_page', 'official_pdf', 'official_news'].includes(source.type)) {
+  if (!['official_web_page', 'official_pdf', 'official_news', 'official_gazette'].includes(source.type)) {
     fail(at, `unexpected type ${source.type}`);
   }
   if (typeof source.url !== 'string' || !source.url.startsWith('https://')) {
     fail(at, 'url must be https');
   } else {
     const host = new URL(source.url).hostname;
-    if (!host.endsWith('eta.gov.eg')) fail(at, `official sources must be on eta.gov.eg, got ${host}`);
+    // ETA's own pages and PDFs must sit on eta.gov.eg. The Official Gazette is the
+    // publication of record and is not always hosted by ETA, so a gazette source
+    // may live on another host, but it must name the issue and its date and say
+    // in the record that it is a copy.
+    if (source.type === 'official_gazette') {
+      if (!source.gazette || typeof source.gazette.issue !== 'string' || source.gazette.issue.trim() === '') {
+        fail(at, 'official_gazette needs gazette.issue');
+      }
+      if (!isDate(source.gazette?.published_on)) fail(at, 'official_gazette needs gazette.published_on as an ISO date');
+      if (typeof source.host_note_ar !== 'string' || source.host_note_ar.trim() === '') {
+        fail(at, 'official_gazette needs host_note_ar explaining where the copy is hosted');
+      }
+    } else if (!host.endsWith('eta.gov.eg')) {
+      fail(at, `official sources must be on eta.gov.eg, got ${host}`);
+    }
   }
   if (!isDate(source.retrieved_on)) fail(at, 'retrieved_on must be an ISO date');
   if (!source.title_ar) fail(at, 'missing title_ar');
