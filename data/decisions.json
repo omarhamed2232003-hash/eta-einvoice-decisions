@@ -593,10 +593,10 @@
       "issuer": "minister_of_finance",
       "title_ar": "قرار وزير المالية رقم 230 لسنة 2022 بإلزام الممولون والمكلفون المسجلون بمصلحة الضرائب المصرية بإصدار فواتير ضريبة إلكترونية (إيصالات ضريبية إلكترونية) عن الخدمات المؤداة والسلع المبيعة للمستهلك النهائى",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "كل الممولين والمكلفين المسجلين بمصلحة الضرائب الملزمين بإصدار إيصالات ضريبية إلكترونية، على الجدول الزمني المرفق بالقرار (المرحلة الأولى: الملزمون قبل القرار؛ الثانية: 400 ممول بمحافظات القاهرة الكبرى والإسكندرية؛ الثالثة: 3000 ممول).",
+      "scope_en": "All VAT-registered taxpayers required to issue e-receipts, on the schedule in the decision's annex (phase 1: taxpayers already in the system; phase 2: 400 taxpayers in Greater Cairo and Alexandria; phase 3: 3,000 taxpayers).",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2022-10-01",
       "phase": {
         "main": null,
         "sub": null
@@ -607,9 +607,9 @@
       ],
       "primary_source_id": "src-erec-230-2022",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF (published in Official Gazette issue 116 supplement, 25 May 2022), including the phase table. The table continues on later pages; phases 4 onward were not read. effective_from is the first operative date in the table."
       }
     },
     {
@@ -620,12 +620,12 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 289-2022 لإلزام الممولين باللإيصال الالكترونى - ومرفق بيان بالاسماء",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الشركات الـ153 الواردة بالقائمة المرفقة – المرحلة الأولى للإيصال الإلكتروني.",
+      "scope_en": "The 153 companies named in the annex; first phase of the e-receipt system.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2022-07-01",
       "phase": {
-        "main": null,
+        "main": 1,
         "sub": null
       },
       "source_ids": [
@@ -634,9 +634,9 @@
       ],
       "primary_source_id": "src-erec-289-2022",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: 153 listed companies, effective 1 July 2022, issued May 2022."
       }
     },
     {
@@ -674,10 +674,10 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رقم (484) لسنة 2022 بإلزام ممولى نطاق مدينة شرم الشيخ بالتعامل بالايصال الالكترونى",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الممولون والمكلفون الواقعون في النطاق الجغرافي لمدينة شرم الشيخ.",
+      "scope_en": "Taxpayers located in the Sharm El-Sheikh geographic scope.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2022-11-01",
       "phase": {
         "main": null,
         "sub": null
@@ -688,9 +688,9 @@
       ],
       "primary_source_id": "src-erec-484-2022",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: Sharm El-Sheikh geographic scope, effective 1 November 2022, issued September 2022."
       }
     },
     {
@@ -755,10 +755,10 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 396 لسنة 2023 لإلزام الممولين بالتعامل باللإيصال الالكتروني - المرحلة الرابعة - الفرعية الثانية",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة – المرحلة الرابعة، الفرعية الثانية.",
+      "scope_en": "Taxpayers named in the annex; main phase 4, sub-phase 2.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2023-07-15",
       "phase": {
         "main": 4,
         "sub": 2
@@ -769,9 +769,9 @@
       ],
       "primary_source_id": "src-erec-396-2023",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: main phase 4, sub-phase 2, effective 15 July 2023."
       }
     },
     {
@@ -782,10 +782,10 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 498 لسنة 2023 لإلزام الممولين بالتعامل بالإيصال الالكتروني – المكلفون بالنطاق الجغرافي بالساحل الشمالي",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "المكلفون بالقرى والمراكز السياحية بالنطاق الجغرافي للساحل الشمالي (سيتي هايتس، أمواج، هاسيندا، بورتو جولف، مارينا، موانت فيو، مرسى، بورتو مارينا، مركز تجاري روزانا).",
+      "scope_en": "Taxpayers in the North Coast tourist villages and centres listed in the decision (City Heights, Amwaj, Hacienda, Porto Golf, Marina, Mount View, Marassi, Porto Marina, Rosana commercial centre).",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2023-08-25",
       "phase": {
         "main": null,
         "sub": null
@@ -796,9 +796,9 @@
       ],
       "primary_source_id": "src-erec-498-2023",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: North Coast geographic scope, effective 25 August 2023, with a name list on the following pages."
       }
     },
     {
@@ -809,10 +809,10 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 702 لسنة 2023 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة الرابعة - الفرعية الثالثة والرابعة",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة – المرحلة الرابعة، الفرعيتان الثالثة والرابعة.",
+      "scope_en": "Taxpayers named in the annex; main phase 4, sub-phases 3 and 4.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2024-02-01",
       "phase": {
         "main": 4,
         "sub": 3
@@ -823,9 +823,9 @@
       ],
       "primary_source_id": "src-erec-702-2023",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: main phase 4, sub-phases 3 and 4, effective 1 February 2024. phase.sub records the first sub-phase covered."
       }
     },
     {
@@ -852,7 +852,7 @@
       "verification": {
         "level": "listing_only",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Listed on ETA's official e-receipt decisions page, but the linked PDF is a corrupted file: it is 555 KB and ends with an HTML error page, so no PDF reader can open it. The decision text could not be read, so no issue date, effective date or scope is recorded. Re-check the link before relying on this row."
       }
     },
     {
@@ -863,10 +863,10 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 139 لسنة 2024 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة الرابعة - الفرعية الرابعة",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة – المرحلة الرابعة، الفرعية الرابعة.",
+      "scope_en": "Taxpayers named in the annex; main phase 4, sub-phase 4.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2024-05-15",
       "phase": {
         "main": 4,
         "sub": 4
@@ -877,9 +877,9 @@
       ],
       "primary_source_id": "src-erec-139-2024",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: main phase 4, sub-phase 4, effective 15 May 2024."
       }
     },
     {
@@ -890,10 +890,10 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 186-2024 لإلزام الممولين بإصدار إيصالات ضريبية الكترونى",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
-      "issued_on": null,
-      "effective_from": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة، مع إلزامهم بالتسجيل على البوابة الإلكترونية لبرنامج التحفيز من نفس التاريخ.",
+      "scope_en": "Taxpayers named in the annex, who must also register on the incentive programme portal from the same date.",
+      "issued_on": "2024-04-09",
+      "effective_from": "2024-07-15",
       "phase": {
         "main": null,
         "sub": null
@@ -904,9 +904,9 @@
       ],
       "primary_source_id": "src-erec-186-2024",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: effective 15 July 2024, issued 9 April 2024."
       }
     },
     {
@@ -917,10 +917,10 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 232 لسنة 2024 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة الرابعة - الفرعية الخامسة",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة – المرحلة الرابعة، الفرعية الخامسة.",
+      "scope_en": "Taxpayers named in the annex; main phase 4, sub-phase 5.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2024-07-15",
       "phase": {
         "main": 4,
         "sub": 5
@@ -931,9 +931,9 @@
       ],
       "primary_source_id": "src-erec-232-2024",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: main phase 4, sub-phase 5, effective 15 July 2024."
       }
     },
     {
@@ -944,10 +944,10 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 278-2024 بإلزام ممولين بإصدار إيصالات ضريبية الكترونى",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة.",
+      "scope_en": "Taxpayers named in the annex.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2024-12-01",
       "phase": {
         "main": null,
         "sub": null
@@ -958,9 +958,9 @@
       ],
       "primary_source_id": "src-erec-278-2024",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: named taxpayers, effective 1 December 2024."
       }
     },
     {
@@ -971,10 +971,10 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 279-2024 بإلزام ممولين بإصدار إيصالات ضريبية الكترونى",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة.",
+      "scope_en": "Taxpayers named in the annex.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2024-10-01",
       "phase": {
         "main": null,
         "sub": null
@@ -985,9 +985,9 @@
       ],
       "primary_source_id": "src-erec-279-2024",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: named taxpayers, effective 1 October 2024."
       }
     },
     {
@@ -998,10 +998,10 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 280-2024 بإلزام ممولين بإصدار إيصالات ضريبية الكترونى",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "شركتا فودافون مصر للاتصالات والشركة المصرية للاتصالات.",
+      "scope_en": "Vodafone Egypt Telecommunications and Telecom Egypt.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2024-11-01",
       "phase": {
         "main": null,
         "sub": null
@@ -1012,9 +1012,9 @@
       ],
       "primary_source_id": "src-erec-280-2024",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: the two named telecom companies, effective 1 November 2024."
       }
     },
     {
@@ -1025,12 +1025,12 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 302 لسنة 2024 بإلزام ممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة الرئيسية الخامسة",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة – المرحلة الرئيسية الخامسة.",
+      "scope_en": "Taxpayers named in the annex; main phase 5.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2024-09-15",
       "phase": {
-        "main": null,
+        "main": 5,
         "sub": null
       },
       "source_ids": [
@@ -1039,9 +1039,9 @@
       ],
       "primary_source_id": "src-erec-302-2024",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: main phase 5, effective 15 September 2024."
       }
     },
     {
@@ -1052,10 +1052,10 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 396 لسنة 2024 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة السادسة - الفرعية الأولى",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة – المرحلة السادسة، الفرعية الأولى.",
+      "scope_en": "Taxpayers named in the annex; main phase 6, sub-phase 1.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2024-11-15",
       "phase": {
         "main": 6,
         "sub": 1
@@ -1066,9 +1066,9 @@
       ],
       "primary_source_id": "src-erec-396-2024",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: main phase 6, sub-phase 1, effective 15 November 2024."
       }
     },
     {
@@ -1079,10 +1079,10 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 455 لسنة 2024 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة السادسة - الفرعية الثانية",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
-      "issued_on": null,
-      "effective_from": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة – المرحلة السادسة، الفرعية الثانية.",
+      "scope_en": "Taxpayers named in the annex; main phase 6, sub-phase 2.",
+      "issued_on": "2024-11-26",
+      "effective_from": "2025-01-15",
       "phase": {
         "main": 6,
         "sub": 2
@@ -1093,9 +1093,9 @@
       ],
       "primary_source_id": "src-erec-455-2024",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: main phase 6, sub-phase 2, effective 15 January 2025, issued 26 November 2024."
       }
     },
     {
@@ -1106,13 +1106,13 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 123 لسنة 2025 لإلزام الممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة السابعة - الفرعية الأولي و الثانية",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة – المرحلة السابعة، الفرعيتان الأولى والثانية.",
+      "scope_en": "Taxpayers named in the annex; main phase 7, sub-phases 1 and 2.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2025-07-01",
       "phase": {
         "main": 7,
-        "sub": null
+        "sub": 1
       },
       "source_ids": [
         "src-ereceipt-listing",
@@ -1120,9 +1120,9 @@
       ],
       "primary_source_id": "src-erec-123-2025",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: main phase 7, sub-phases 1 and 2, effective 1 July 2025. phase.sub records the first sub-phase covered."
       }
     },
     {
@@ -1133,13 +1133,13 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 225 لسنة 2025 لإلزام الممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة الثامنة - الفرعية الأولي",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة – المرحلة الثامنة، الفرعية الأولى.",
+      "scope_en": "Taxpayers named in the annex; main phase 8, sub-phase 1.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2025-07-15",
       "phase": {
         "main": 8,
-        "sub": null
+        "sub": 1
       },
       "source_ids": [
         "src-ereceipt-listing",
@@ -1147,9 +1147,9 @@
       ],
       "primary_source_id": "src-erec-225-2025",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: main phase 8, sub-phase 1, effective 15 July 2025."
       }
     },
     {
@@ -1160,10 +1160,10 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 281 لسنة 2025 لإلزام الممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة الثامنة - الفرعية الثانية",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة – المرحلة الثامنة، الفرعية الثانية.",
+      "scope_en": "Taxpayers named in the annex; main phase 8, sub-phase 2.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2025-09-15",
       "phase": {
         "main": 8,
         "sub": 2
@@ -1174,9 +1174,9 @@
       ],
       "primary_source_id": "src-erec-281-2025",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: main phase 8, sub-phase 2, effective 15 September 2025."
       }
     },
     {
@@ -1187,13 +1187,13 @@
       "issuer": "head_of_eta",
       "title_ar": "قرار رئيس المصلحة رقم 361 لسنة 2025 لإلزام الممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة التاسعة - الفرعية الأولي",
       "title_en": null,
-      "scope_ar": null,
-      "scope_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة – المرحلة التاسعة، الفرعية الأولى.",
+      "scope_en": "Taxpayers named in the annex; main phase 9, sub-phase 1.",
       "issued_on": null,
-      "effective_from": null,
+      "effective_from": "2025-11-15",
       "phase": {
         "main": 9,
-        "sub": null
+        "sub": 1
       },
       "source_ids": [
         "src-ereceipt-listing",
@@ -1201,9 +1201,9 @@
       ],
       "primary_source_id": "src-erec-361-2025",
       "verification": {
-        "level": "listing_only",
+        "level": "document_read",
         "checked_on": "2026-11-27",
-        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+        "notes": "Read from page 1 of the official PDF: main phase 9, sub-phase 1, effective 15 November 2025."
       }
     }
   ]
