@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.3
+
+- `test/docs-links.test.js`: every relative link in the documentation must point
+  at a file that exists. Tests 70/70.
 ## 0.10.2
 
 - The dataset rules moved out of `scripts/validate.mjs` into `src/validate.js`
