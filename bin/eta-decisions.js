@@ -30,6 +30,12 @@ examples:
   eta-decisions show eta-einv-0188-2020
   eta-decisions stats --json`;
 
+const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
+if (process.argv.includes('--version') || process.argv.includes('-v')) {
+  console.log(pkg.version);
+  process.exit(0);
+}
+
 const argv = process.argv.slice(2);
 const [command, ...rest] = argv;
 

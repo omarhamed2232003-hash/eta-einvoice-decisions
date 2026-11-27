@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.1
+
+- `--version` on the CLI, alongside the existing `--help`.
+- CI matrix now runs Node 20, 22 and 24. Tests 25/25.
 ## 0.10.0
 
 - `list --format csv`: the filtered list as RFC 4180 CSV with a fixed header
