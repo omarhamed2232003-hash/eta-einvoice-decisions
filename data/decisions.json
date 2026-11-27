@@ -1,0 +1,1210 @@
+{
+  "schemaVersion": 1,
+  "dataset": {
+    "id": "eta-einvoice-decisions",
+    "title_ar": "قرارات منظومتي الفاتورة الإلكترونية والإيصال الإلكتروني في مصر",
+    "title_en": "Egyptian Tax Authority e-invoice and e-receipt decisions",
+    "jurisdiction": "EG",
+    "authority": "Egyptian Tax Authority (ETA) - مصلحة الضرائب المصرية",
+    "compiled_on": "2026-11-27",
+    "coverage": "Every decision published on ETA's two official decision pages on 2026-11-27, plus the Minister of Finance decision they cite as their basis. This is not a complete legal record of Egyptian tax law.",
+    "disclaimer_ar": "هذا المشروع مرجع معلوماتي فقط وليس استشارة ضريبية أو قانونية. ارجع دائمًا إلى النص الرسمي المنشور على موقع مصلحة الضرائب المصرية.",
+    "disclaimer_en": "This project is an informational reference, not tax or legal advice. Always rely on the official text published by the Egyptian Tax Authority.",
+    "license": "Data: CC BY 4.0. Code: MIT."
+  },
+  "sources": [
+    {
+      "id": "src-einv-listing",
+      "type": "official_web_page",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرارات الإلزام بمنظومة الفاتورة الإلكترونية",
+      "title_en": "E-invoice mandate decisions (official listing page)",
+      "url": "https://eta.gov.eg/ar/content/qrarat-alalzam-bmnzwmt-alfatwrt-alalktrwnyt",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-ereceipt-listing",
+      "type": "official_web_page",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرارات الإلزام بالتعامل بالإيصال الإلكتروني",
+      "title_en": "E-receipt mandate decisions (official listing page)",
+      "url": "https://eta.gov.eg/ar/content/qrarat-alalzam-baltaml-balaysal-alalktrwny",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-pres-phase-1-2",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "عرض تقديمي: منظومة الفاتورة الضريبية الإلكترونية – المرحلتان الأولى والثانية",
+      "title_en": "E-Invoice Taxpayers presentation - Phase 1 & 2",
+      "url": "https://eta.gov.eg/sites/default/files/2021-09/E-Invoice%20Taxpayers%20presentation-Phase%201%20%26%202.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-einv-0386-2020",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رقم 386 لسنة 2020 بإلزام 134 شركة بالمرحلة الأولى للفاتورة الإلكترونية",
+      "title_en": "Decision 386/2020: obliging 134 companies in the first phase of the e-invoice system",
+      "url": "https://eta.gov.eg/sites/default/files/2021-09/%D9%82%D8%B1%D8%A7%D8%B1%20386%20%D9%84%D8%B3%D9%86%D8%A9%202020%20%D8%A8%D8%A7%D9%84%D8%B2%D8%A7%D9%85%20134%20%D8%B4%D8%B1%D9%83%D8%A9%20%D8%A8%D8%A7%D9%84%D9%85%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A7%D9%84%D8%A7%D9%88%D9%84%D9%89%20%D9%84%D9%84%D9%81%D8%A7%D8%AA%D9%88%D8%B1%D8%A9.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-einv-0518-2020",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار 518 لسنة 2020 بإلزام 347 شركة بالمرحلة الثانية للفاتورة الإلكترونية",
+      "title_en": "Decision 518/2020: obliging 347 companies in the second phase of the e-invoice system",
+      "url": "https://eta.gov.eg/sites/default/files/2021-09/%D9%82%D8%B1%D8%A7%D8%B1%20518%20%D9%84%D8%B3%D9%86%D8%A9%202020%20%D8%A8%D8%A7%D9%84%D8%B2%D8%A7%D9%85%20347%20%D8%B4%D8%B1%D9%83%D8%A9%20%D8%A8%D8%A7%D9%84%D9%85%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D8%A9.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-einv-0085-2021",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رقم (85) لسنة 2021 بإلزام المرحلة الثالثة من الفاتورة الإلكترونية",
+      "title_en": "Decision 85/2021: third phase of the e-invoice mandate",
+      "url": "https://eta.gov.eg/sites/default/files/2021-09/law-85-2021_0.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-einv-0195-2021",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رقم (195) لسنة 2021 بإلزام مركز متوسطي الممولين وكبار المهن الحرة",
+      "title_en": "Decision 195/2021: obliging taxpayers of the Medium Taxpayers Center and the Large Free Professions Center",
+      "url": "https://eta.gov.eg/sites/default/files/2021-11/%D9%82%D8%B1%D8%A7%D8%B1%20%28195%29%20-2021%20%D8%A5%D9%84%D8%B2%D8%A7%D9%85%20%D9%85%D8%B1%D9%83%D8%B2%20%D9%85%D8%AA%D9%88%D8%B3%D8%B7%D9%8A%20%D9%88%D9%83%D8%A8%D8%A7%D8%B1%20%D9%85%D9%87%D9%86%20%D8%AD%D8%B1%D8%A9.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-einv-0443-2021",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رقم (443) لسنة 2021 بإلزام المرحلة الخامسة من الفاتورة الإلكترونية",
+      "title_en": "Decision 443/2021: fifth phase of the e-invoice mandate",
+      "url": "https://eta.gov.eg/sites/default/files/2021-11/%D9%82%D8%B1%D8%A7%D8%B1%20%28443%29%20-2021%20%D8%A8%D8%A5%D9%84%D8%B2%D8%A7%D9%85%20%D8%A7%D9%84%D9%85%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A7%D9%84%D8%AE%D8%A7%D9%85%D8%B3%D8%A9%20%D9%85%D9%86%20%D8%A7%D9%84%D9%81%D8%A7%D8%AA%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-einv-0619-2021",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رقم (619) لسنة 2021 بإلزام المرحلة السادسة من الفاتورة الإلكترونية",
+      "title_en": "Decision 619/2021: sixth phase of the e-invoice mandate",
+      "url": "https://eta.gov.eg/sites/default/files/2021-11/%D9%82%D8%B1%D8%A7%D8%B1%20%D8%A7%D9%84%D9%85%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A7%D9%84%D8%B3%D8%A7%D8%AF%D8%B3%D8%A9%20%D9%85%D9%86%20%D8%A7%D9%84%D9%81%D8%A7%D8%AA%D9%88%D8%B1%D8%A9.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-einv-0208-2022",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رقم (208) لسنة 2022 بإلزام الشركات المسجلة بمناطق (القاهرة - الجيزة - القليوبية)",
+      "title_en": "Decision 208/2022: companies registered in Cairo, Giza and Qalyubia",
+      "url": "https://eta.gov.eg/sites/default/files/2022-03/LAW-208-2022.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-einv-0323-2022",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رقم (323) لسنة 2022 بإلزام المرحلة الثامنة من الفاتورة الإلكترونية",
+      "title_en": "Decision 323/2022: eighth phase of the e-invoice mandate, on a governorate schedule",
+      "url": "https://eta.gov.eg/sites/default/files/2022-07/law-323-efatora8.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-230-2022",
+      "type": "official_pdf",
+      "publisher": "Minister of Finance",
+      "title_ar": "قرار وزير المالية رقم 230 لسنة 2022 بإلزام الممولون والمكلفون المسجلون بمصلحة الضرائب المصرية بإصدار فواتير ضريبة إلكترونية (إيصالات ضريبية إلكترونية) عن الخدمات المؤداة والسلع المبيعة للمستهلك النهائى",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2024-09/decision.no_.230.for_.2022.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-38-2024",
+      "type": "official_pdf",
+      "publisher": "Minister of Finance",
+      "title_ar": "قرار وزير المالية رقم 38 لسنة 2024 بشأن استبدال بعض نصوص مواد قرار 230 لسنة 2022",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2024-09/decision.no_.38.for_.2024.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-289-2022",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 289-2022 لإلزام الممولين باللإيصال الالكترونى - ومرفق بيان بالاسماء",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2022-06/e-receipt-stage1.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-345-None",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 345 لإلزام الممولين بالتعامل باللإيصال الالكتروني - المرحلة الثانية",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2022-10/e-receipt-stage2.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-484-2022",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رقم (484) لسنة 2022 بإلزام ممولى نطاق مدينة شرم الشيخ بالتعامل بالايصال الالكترونى",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2022-10/KARAR-484-22.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-588-None",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 588 لإلزام الممولين بالتعامل باللإيصال الالكتروني - المرحلة الثالثة",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2022-10/karar-588-22.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-168-None",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 168 لإلزام الممولين بالتعامل باللإيصال الالكتروني - المرحلة الرابعة - الفرعية الاولى",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2023-03/karar-168--2023.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-396-2023",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 396 لسنة 2023 لإلزام الممولين بالتعامل باللإيصال الالكتروني - المرحلة الرابعة - الفرعية الثانية",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2023-06/e-receipt-karar-396-2023.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-498-2023",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 498 لسنة 2023 لإلزام الممولين بالتعامل بالإيصال الالكتروني – المكلفون بالنطاق الجغرافي بالساحل الشمالي",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2023-08/karar-498-23.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-702-2023",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 702 لسنة 2023 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة الرابعة - الفرعية الثالثة والرابعة",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2023-12/ETA-KARAR-702-2023-E-RECIEPT.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-139-2024",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 139 لسنة 2024 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة الرابعة - الفرعية الرابعة",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2024-03/eta-karar-139-2024-e-reciept.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-186-2024",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 186-2024 لإلزام الممولين بإصدار إيصالات ضريبية الكترونى",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2026-02/eta-karar-186-2024-e-reciept.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-232-2024",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 232 لسنة 2024 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة الرابعة - الفرعية الخامسة",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2024-06/eta-karar-232-2024-e-reciept.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-278-2024",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 278-2024 بإلزام ممولين بإصدار إيصالات ضريبية الكترونى",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2024-06/eta-karar-278-2024-e-reciept.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-279-2024",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 279-2024 بإلزام ممولين بإصدار إيصالات ضريبية الكترونى",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2024-06/eta-karar-279-2024-e-reciept.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-280-2024",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 280-2024 بإلزام ممولين بإصدار إيصالات ضريبية الكترونى",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2024-06/eta-karar-280-2024-e-reciept.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-302-2024",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 302 لسنة 2024 بإلزام ممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة الرئيسية الخامسة",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2024-07/eta-karar-302-2024-e-reciept.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-396-2024",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 396 لسنة 2024 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة السادسة - الفرعية الأولى",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2024-09/karar-396-2024-e-reciept.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-455-2024",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 455 لسنة 2024 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة السادسة - الفرعية الثانية",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2024-12/karar-455-2024-e-reciept-phase6-wave2.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-123-2025",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 123 لسنة 2025 لإلزام الممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة السابعة - الفرعية الأولي و الثانية",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2025-03/karar-123-2025-e.reciept-phase7-wave12.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-225-2025",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 225 لسنة 2025 لإلزام الممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة الثامنة - الفرعية الأولي",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2025-05/karar-225-2025-e.reciept-phase8-wave1.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-281-2025",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 281 لسنة 2025 لإلزام الممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة الثامنة - الفرعية الثانية",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2025-07/karar-281-2025-e.reciept-phase8-wave2.pdf",
+      "retrieved_on": "2026-11-27"
+    },
+    {
+      "id": "src-erec-361-2025",
+      "type": "official_pdf",
+      "publisher": "Egyptian Tax Authority",
+      "title_ar": "قرار رئيس المصلحة رقم 361 لسنة 2025 لإلزام الممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة التاسعة - الفرعية الأولي",
+      "title_en": null,
+      "url": "https://eta.gov.eg/sites/default/files/2025-09/karar-361-2025-e.reciept-phase9-wave1.pdf",
+      "retrieved_on": "2026-11-27"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "eta-einv-0188-2020",
+      "system": "einvoice",
+      "number": "188",
+      "year": 2020,
+      "issuer": "minister_of_finance",
+      "title_ar": "قرار وزير المالية رقم 188 لسنة 2020 بتطبيق منظومة الفاتورة الضريبية الإلكترونية",
+      "title_en": "Minister of Finance Decision 188/2020: applying the electronic tax invoice system",
+      "scope_ar": "المجتمع الضريبي ككل؛ الأساس القانوني الذي تستند إليه قرارات المراحل التالية.",
+      "scope_en": "The tax community as a whole; the legal basis cited by every phase decision below.",
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": null,
+        "sub": null
+      },
+      "source_ids": [
+        "src-pres-phase-1-2"
+      ],
+      "primary_source_id": "src-pres-phase-1-2",
+      "verification": {
+        "level": "referenced",
+        "checked_on": "2026-11-27",
+        "notes": "Referenced in ETA's official Phase 1 & 2 presentation and cited as a legal basis inside decisions 208/2022 and 323/2022. The decision text itself has not been retrieved yet, so no date is recorded."
+      }
+    },
+    {
+      "id": "eta-einv-0386-2020",
+      "system": "einvoice",
+      "number": "386",
+      "year": 2020,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رقم 386 لسنة 2020 بإلزام 134 شركة بالمرحلة الأولى للفاتورة الإلكترونية",
+      "title_en": "Decision 386/2020: obliging 134 companies in the first phase of the e-invoice system",
+      "scope_ar": "الشركات الـ134 الواردة بالبيان المرفق، المرحلة الأولى لمنظومة الفاتورة الإلكترونية.",
+      "scope_en": "The 134 companies named in the annex; first phase of the e-invoice system.",
+      "issued_on": null,
+      "effective_from": "2020-11-15",
+      "phase": {
+        "main": 1,
+        "sub": null
+      },
+      "source_ids": [
+        "src-einv-listing",
+        "src-einv-0386-2020"
+      ],
+      "primary_source_id": "src-einv-0386-2020",
+      "verification": {
+        "level": "official_summary",
+        "checked_on": "2026-11-27",
+        "notes": "Effective date taken from ETA's official Phase 1 & 2 presentation (slide 4). The decision PDF itself was not read: it is a 31.9 MB scan and the download did not complete."
+      }
+    },
+    {
+      "id": "eta-einv-0518-2020",
+      "system": "einvoice",
+      "number": "518",
+      "year": 2020,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار 518 لسنة 2020 بإلزام 347 شركة بالمرحلة الثانية للفاتورة الإلكترونية",
+      "title_en": "Decision 518/2020: obliging 347 companies in the second phase of the e-invoice system",
+      "scope_ar": "الشركات الـ347 الواردة بالبيان المرفق، المرحلة الثانية.",
+      "scope_en": "The 347 companies named in the annex; second phase.",
+      "issued_on": null,
+      "effective_from": "2021-02-15",
+      "phase": {
+        "main": 2,
+        "sub": null
+      },
+      "source_ids": [
+        "src-einv-listing",
+        "src-einv-0518-2020"
+      ],
+      "primary_source_id": "src-einv-0518-2020",
+      "verification": {
+        "level": "official_summary",
+        "checked_on": "2026-11-27",
+        "notes": "Effective date taken from ETA's official Phase 1 & 2 presentation (slide 4). The decision PDF itself was not read: it is a 25.7 MB scan and the download did not complete."
+      }
+    },
+    {
+      "id": "eta-einv-0085-2021",
+      "system": "einvoice",
+      "number": "85",
+      "year": 2021,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رقم (85) لسنة 2021 بإلزام المرحلة الثالثة من الفاتورة الإلكترونية",
+      "title_en": "Decision 85/2021: third phase of the e-invoice mandate",
+      "scope_ar": "كافة الشركات المسجلة بالمركز الضريبي لكبار الممولين.",
+      "scope_en": "All companies registered with the Large Taxpayers Center.",
+      "issued_on": null,
+      "effective_from": "2021-05-15",
+      "phase": {
+        "main": 3,
+        "sub": null
+      },
+      "source_ids": [
+        "src-einv-listing",
+        "src-einv-0085-2021"
+      ],
+      "primary_source_id": "src-einv-0085-2021",
+      "verification": {
+        "level": "document_read",
+        "checked_on": "2026-11-27",
+        "notes": "Read from the decision's first article on page 1 of the official PDF."
+      }
+    },
+    {
+      "id": "eta-einv-0195-2021",
+      "system": "einvoice",
+      "number": "195",
+      "year": 2021,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رقم (195) لسنة 2021 بإلزام مركز متوسطي الممولين وكبار المهن الحرة",
+      "title_en": "Decision 195/2021: obliging taxpayers of the Medium Taxpayers Center and the Large Free Professions Center",
+      "scope_ar": "كافة الشركات المسجلة بمركز متوسطي الممولين ومركز كبار المهن الحرة (مدينة نصر).",
+      "scope_en": "All companies registered with the Medium Taxpayers Center and the Large Free Professions Center (Nasr City).",
+      "issued_on": null,
+      "effective_from": "2021-09-15",
+      "phase": {
+        "main": null,
+        "sub": null
+      },
+      "source_ids": [
+        "src-einv-listing",
+        "src-einv-0195-2021"
+      ],
+      "primary_source_id": "src-einv-0195-2021",
+      "verification": {
+        "level": "document_read",
+        "checked_on": "2026-11-27",
+        "notes": "Read from the decision's first article on page 1 of the official PDF. The decision does not label itself a phase number."
+      }
+    },
+    {
+      "id": "eta-einv-0443-2021",
+      "system": "einvoice",
+      "number": "443",
+      "year": 2021,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رقم (443) لسنة 2021 بإلزام المرحلة الخامسة من الفاتورة الإلكترونية",
+      "title_en": "Decision 443/2021: fifth phase of the e-invoice mandate",
+      "scope_ar": "المجموعة الأولى من الشركات المسجلة في الهيئة العامة للاستثمار والمناطق الحرة بالقاهرة، بإجمالي 373 شركة وفقًا للبيان المرفق.",
+      "scope_en": "First group of companies registered with the General Authority for Investment and Free Zones (GAFI) in Cairo, 373 companies named in the annex.",
+      "issued_on": null,
+      "effective_from": "2021-12-15",
+      "phase": {
+        "main": 5,
+        "sub": null
+      },
+      "source_ids": [
+        "src-einv-listing",
+        "src-einv-0443-2021"
+      ],
+      "primary_source_id": "src-einv-0443-2021",
+      "verification": {
+        "level": "document_read",
+        "checked_on": "2026-11-27",
+        "notes": "Read from the decision's first article on page 1 of the official PDF."
+      }
+    },
+    {
+      "id": "eta-einv-0619-2021",
+      "system": "einvoice",
+      "number": "619",
+      "year": 2021,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رقم (619) لسنة 2021 بإلزام المرحلة السادسة من الفاتورة الإلكترونية",
+      "title_en": "Decision 619/2021: sixth phase of the e-invoice mandate",
+      "scope_ar": "المجموعة الثانية من الشركات المسجلة في هيئة الاستثمار والمناطق الحرة بالقاهرة، وفقًا للبيان المرفق.",
+      "scope_en": "Second group of GAFI-registered companies in Cairo, per the annex.",
+      "issued_on": null,
+      "effective_from": "2022-02-15",
+      "phase": {
+        "main": 6,
+        "sub": null
+      },
+      "source_ids": [
+        "src-einv-listing",
+        "src-einv-0619-2021"
+      ],
+      "primary_source_id": "src-einv-0619-2021",
+      "verification": {
+        "level": "document_read",
+        "checked_on": "2026-11-27",
+        "notes": "Read from the decision's first article on page 1 of the official PDF."
+      }
+    },
+    {
+      "id": "eta-einv-0208-2022",
+      "system": "einvoice",
+      "number": "208",
+      "year": 2022,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رقم (208) لسنة 2022 بإلزام الشركات المسجلة بمناطق (القاهرة - الجيزة - القليوبية)",
+      "title_en": "Decision 208/2022: companies registered in Cairo, Giza and Qalyubia",
+      "scope_ar": "كافة الشركات المسجلة بمناطق (القاهرة – الجيزة – القليوبية) وفقًا لبيان الممولين المعلن على موقع المصلحة.",
+      "scope_en": "All companies registered in the Cairo, Giza and Qalyubia governorates, per the taxpayer list published on eta.gov.eg.",
+      "issued_on": "2022-03-16",
+      "effective_from": "2022-06-15",
+      "phase": {
+        "main": null,
+        "sub": null
+      },
+      "source_ids": [
+        "src-einv-listing",
+        "src-einv-0208-2022"
+      ],
+      "primary_source_id": "src-einv-0208-2022",
+      "verification": {
+        "level": "document_read",
+        "checked_on": "2026-11-27",
+        "notes": "Read from page 1 of the official PDF, including the issue date (16 March 2022)."
+      }
+    },
+    {
+      "id": "eta-einv-0323-2022",
+      "system": "einvoice",
+      "number": "323",
+      "year": 2022,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رقم (323) لسنة 2022 بإلزام المرحلة الثامنة من الفاتورة الإلكترونية",
+      "title_en": "Decision 323/2022: eighth phase of the e-invoice mandate, on a governorate schedule",
+      "scope_ar": "جميع الشركات المسجلة بالمأموريات الضريبية بكافة المحافظات وفقًا لقوائم الممولين المعلنة، على الجدول الزمني المرفق بأربع مراحل فرعية.",
+      "scope_en": "All companies registered with tax offices in all governorates, per the published taxpayer lists, on the four-step governorate schedule in the annex.",
+      "issued_on": "2022-07-20",
+      "effective_from": "2022-09-15",
+      "phase": {
+        "main": 8,
+        "sub": null
+      },
+      "source_ids": [
+        "src-einv-listing",
+        "src-einv-0323-2022"
+      ],
+      "primary_source_id": "src-einv-0323-2022",
+      "verification": {
+        "level": "document_read",
+        "checked_on": "2026-11-27",
+        "notes": "Read from pages 1-2 of the official PDF, including the annex schedule and the issue date (20 July 2022). The earliest effective date in the annex is 15 September 2022."
+      },
+      "effective_schedule": [
+        {
+          "from": "2022-09-15",
+          "scope_ar": "الإسكندرية – البحيرة – مرسى مطروح",
+          "scope_en": "Alexandria, Beheira, Marsa Matrouh"
+        },
+        {
+          "from": "2022-10-15",
+          "scope_ar": "الشرقية – الغربية – كفر الشيخ – المنوفية – دمياط",
+          "scope_en": "Sharqia, Gharbia, Kafr El-Sheikh, Menoufia, Damietta"
+        },
+        {
+          "from": "2022-11-15",
+          "scope_ar": "الدقهلية – بورسعيد – الإسماعيلية – السويس – شمال سيناء – جنوب سيناء",
+          "scope_en": "Dakahlia, Port Said, Ismailia, Suez, North Sinai, South Sinai"
+        },
+        {
+          "from": "2022-12-15",
+          "scope_ar": "الفيوم – أسيوط – سوهاج – المنيا – قنا – بني سويف – الوادي الجديد – الأقصر – أسوان – البحر الأحمر، وجميع الممولين المسجلين الذين لم يصدر لهم قرار إلزام سابق",
+          "scope_en": "Fayoum, Assiut, Sohag, Minya, Qena, Beni Suef, New Valley, Luxor, Aswan, Red Sea, plus all registered taxpayers not covered by an earlier decision"
+        }
+      ]
+    },
+    {
+      "id": "eta-erec-0230-2022",
+      "system": "ereceipt",
+      "number": "230",
+      "year": 2022,
+      "issuer": "minister_of_finance",
+      "title_ar": "قرار وزير المالية رقم 230 لسنة 2022 بإلزام الممولون والمكلفون المسجلون بمصلحة الضرائب المصرية بإصدار فواتير ضريبة إلكترونية (إيصالات ضريبية إلكترونية) عن الخدمات المؤداة والسلع المبيعة للمستهلك النهائى",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": null,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-230-2022"
+      ],
+      "primary_source_id": "src-erec-230-2022",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0289-2022",
+      "system": "ereceipt",
+      "number": "289",
+      "year": 2022,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 289-2022 لإلزام الممولين باللإيصال الالكترونى - ومرفق بيان بالاسماء",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": null,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-289-2022"
+      ],
+      "primary_source_id": "src-erec-289-2022",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0345-2022",
+      "system": "ereceipt",
+      "number": "345",
+      "year": 2022,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 345 لإلزام الممولين بالتعامل باللإيصال الالكتروني - المرحلة الثانية",
+      "title_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة (400 ممول/مكلف) – المرحلة الثانية.",
+      "scope_en": "The 400 taxpayers named in the annex; second phase of the e-receipt system.",
+      "issued_on": null,
+      "effective_from": "2022-10-01",
+      "phase": {
+        "main": 2,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-345-None"
+      ],
+      "primary_source_id": "src-erec-345-None",
+      "verification": {
+        "level": "document_read",
+        "checked_on": "2026-11-27",
+        "notes": "Read from page 1 of the official PDF: second phase, 400 listed taxpayers, effective 1 October 2022."
+      }
+    },
+    {
+      "id": "eta-erec-0484-2022",
+      "system": "ereceipt",
+      "number": "484",
+      "year": 2022,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رقم (484) لسنة 2022 بإلزام ممولى نطاق مدينة شرم الشيخ بالتعامل بالايصال الالكترونى",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": null,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-484-2022"
+      ],
+      "primary_source_id": "src-erec-484-2022",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0588-2022",
+      "system": "ereceipt",
+      "number": "588",
+      "year": 2022,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 588 لإلزام الممولين بالتعامل باللإيصال الالكتروني - المرحلة الثالثة",
+      "title_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة (2000 ممول/مكلف) – المرحلة الثالثة.",
+      "scope_en": "The 2,000 taxpayers named in the annex; third phase of the e-receipt system.",
+      "issued_on": null,
+      "effective_from": "2023-01-15",
+      "phase": {
+        "main": 3,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-588-None"
+      ],
+      "primary_source_id": "src-erec-588-None",
+      "verification": {
+        "level": "document_read",
+        "checked_on": "2026-11-27",
+        "notes": "Read from page 1 of the official PDF: third phase, 2,000 listed taxpayers, effective 15 January 2023."
+      }
+    },
+    {
+      "id": "eta-erec-0168-2023",
+      "system": "ereceipt",
+      "number": "168",
+      "year": 2023,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 168 لإلزام الممولين بالتعامل باللإيصال الالكتروني - المرحلة الرابعة - الفرعية الاولى",
+      "title_en": null,
+      "scope_ar": "الممولون والمكلفون الواردة أسماؤهم بالقائمة المرفقة – المرحلة الرابعة، الفرعية الأولى.",
+      "scope_en": "Taxpayers named in the annex; main phase 4, sub-phase 1 of the e-receipt system.",
+      "issued_on": null,
+      "effective_from": "2023-04-15",
+      "phase": {
+        "main": 4,
+        "sub": 1
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-168-None"
+      ],
+      "primary_source_id": "src-erec-168-None",
+      "verification": {
+        "level": "document_read",
+        "checked_on": "2026-11-27",
+        "notes": "Read from page 1 of the official PDF: main phase 4, sub-phase 1, effective 15 April 2023."
+      }
+    },
+    {
+      "id": "eta-erec-0396-2023",
+      "system": "ereceipt",
+      "number": "396",
+      "year": 2023,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 396 لسنة 2023 لإلزام الممولين بالتعامل باللإيصال الالكتروني - المرحلة الرابعة - الفرعية الثانية",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": 4,
+        "sub": 2
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-396-2023"
+      ],
+      "primary_source_id": "src-erec-396-2023",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0498-2023",
+      "system": "ereceipt",
+      "number": "498",
+      "year": 2023,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 498 لسنة 2023 لإلزام الممولين بالتعامل بالإيصال الالكتروني – المكلفون بالنطاق الجغرافي بالساحل الشمالي",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": null,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-498-2023"
+      ],
+      "primary_source_id": "src-erec-498-2023",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0702-2023",
+      "system": "ereceipt",
+      "number": "702",
+      "year": 2023,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 702 لسنة 2023 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة الرابعة - الفرعية الثالثة والرابعة",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": 4,
+        "sub": 3
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-702-2023"
+      ],
+      "primary_source_id": "src-erec-702-2023",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0038-2024",
+      "system": "ereceipt",
+      "number": "38",
+      "year": 2024,
+      "issuer": "minister_of_finance",
+      "title_ar": "قرار وزير المالية رقم 38 لسنة 2024 بشأن استبدال بعض نصوص مواد قرار 230 لسنة 2022",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": null,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-38-2024"
+      ],
+      "primary_source_id": "src-erec-38-2024",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0139-2024",
+      "system": "ereceipt",
+      "number": "139",
+      "year": 2024,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 139 لسنة 2024 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة الرابعة - الفرعية الرابعة",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": 4,
+        "sub": 4
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-139-2024"
+      ],
+      "primary_source_id": "src-erec-139-2024",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0186-2024",
+      "system": "ereceipt",
+      "number": "186",
+      "year": 2024,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 186-2024 لإلزام الممولين بإصدار إيصالات ضريبية الكترونى",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": null,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-186-2024"
+      ],
+      "primary_source_id": "src-erec-186-2024",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0232-2024",
+      "system": "ereceipt",
+      "number": "232",
+      "year": 2024,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 232 لسنة 2024 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة الرابعة - الفرعية الخامسة",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": 4,
+        "sub": 5
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-232-2024"
+      ],
+      "primary_source_id": "src-erec-232-2024",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0278-2024",
+      "system": "ereceipt",
+      "number": "278",
+      "year": 2024,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 278-2024 بإلزام ممولين بإصدار إيصالات ضريبية الكترونى",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": null,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-278-2024"
+      ],
+      "primary_source_id": "src-erec-278-2024",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0279-2024",
+      "system": "ereceipt",
+      "number": "279",
+      "year": 2024,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 279-2024 بإلزام ممولين بإصدار إيصالات ضريبية الكترونى",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": null,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-279-2024"
+      ],
+      "primary_source_id": "src-erec-279-2024",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0280-2024",
+      "system": "ereceipt",
+      "number": "280",
+      "year": 2024,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 280-2024 بإلزام ممولين بإصدار إيصالات ضريبية الكترونى",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": null,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-280-2024"
+      ],
+      "primary_source_id": "src-erec-280-2024",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0302-2024",
+      "system": "ereceipt",
+      "number": "302",
+      "year": 2024,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 302 لسنة 2024 بإلزام ممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة الرئيسية الخامسة",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": null,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-302-2024"
+      ],
+      "primary_source_id": "src-erec-302-2024",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0396-2024",
+      "system": "ereceipt",
+      "number": "396",
+      "year": 2024,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 396 لسنة 2024 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة السادسة - الفرعية الأولى",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": 6,
+        "sub": 1
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-396-2024"
+      ],
+      "primary_source_id": "src-erec-396-2024",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0455-2024",
+      "system": "ereceipt",
+      "number": "455",
+      "year": 2024,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 455 لسنة 2024 لإلزام الممولين بالتعامل باللإيصال الالكتروني ومنظومة التحفيز - المرحلة السادسة - الفرعية الثانية",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": 6,
+        "sub": 2
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-455-2024"
+      ],
+      "primary_source_id": "src-erec-455-2024",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0123-2025",
+      "system": "ereceipt",
+      "number": "123",
+      "year": 2025,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 123 لسنة 2025 لإلزام الممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة السابعة - الفرعية الأولي و الثانية",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": 7,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-123-2025"
+      ],
+      "primary_source_id": "src-erec-123-2025",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0225-2025",
+      "system": "ereceipt",
+      "number": "225",
+      "year": 2025,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 225 لسنة 2025 لإلزام الممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة الثامنة - الفرعية الأولي",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": 8,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-225-2025"
+      ],
+      "primary_source_id": "src-erec-225-2025",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0281-2025",
+      "system": "ereceipt",
+      "number": "281",
+      "year": 2025,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 281 لسنة 2025 لإلزام الممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة الثامنة - الفرعية الثانية",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": 8,
+        "sub": 2
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-281-2025"
+      ],
+      "primary_source_id": "src-erec-281-2025",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    },
+    {
+      "id": "eta-erec-0361-2025",
+      "system": "ereceipt",
+      "number": "361",
+      "year": 2025,
+      "issuer": "head_of_eta",
+      "title_ar": "قرار رئيس المصلحة رقم 361 لسنة 2025 لإلزام الممولين بالتعامل بالإيصال الالكتروني ومنظومة التحفيز - المرحلة التاسعة - الفرعية الأولي",
+      "title_en": null,
+      "scope_ar": null,
+      "scope_en": null,
+      "issued_on": null,
+      "effective_from": null,
+      "phase": {
+        "main": 9,
+        "sub": null
+      },
+      "source_ids": [
+        "src-ereceipt-listing",
+        "src-erec-361-2025"
+      ],
+      "primary_source_id": "src-erec-361-2025",
+      "verification": {
+        "level": "listing_only",
+        "checked_on": "2026-11-27",
+        "notes": "Listed on ETA's official e-receipt decisions page with its own PDF link. The decision text was not read, so no issue date, effective date or scope is recorded."
+      }
+    }
+  ]
+}

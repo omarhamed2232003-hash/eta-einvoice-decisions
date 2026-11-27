@@ -1,0 +1,101 @@
+# eta-einvoice-decisions
+
+قرارات مصلحة الضرائب المصرية في منظومتي الفاتورة الإلكترونية والإيصال الإلكتروني، كبيانات منظمة: رقم القرار وسنته وجهة إصداره ونطاقه وتاريخ سريانه ورابط مصدره الرسمي.
+A dated, sourced dataset of Egyptian Tax Authority e-invoice and e-receipt decisions.
+
+> **مرجع معلوماتي فقط.** هذا المشروع ليس استشارة ضريبية أو قانونية، وليس بديلًا عن النص الرسمي. الاعتماد دائمًا على ما تنشره مصلحة الضرائب المصرية.
+> **Informational reference only.** This is not tax or legal advice. Always rely on the official text published by the Egyptian Tax Authority (ETA).
+
+## المحتوى الحالي
+
+32 صفًا، مجمّعة في 2026-11-27 من صفحتي القرارات الرسميتين على eta.gov.eg:
+
+| النظام | عدد القرارات | منها بتواريخ مقروءة من المستند نفسه |
+|---|---|---|
+| الفاتورة الإلكترونية (`einvoice`) | 9 | 6 قرارات + قراران بتواريخ من عرض رسمي للمصلحة |
+| الإيصال الإلكتروني (`ereceipt`) | 23 | 3 |
+
+كل صف يحمل `verification.level` يوضح بالضبط كيف تم التحقق منه:
+
+| المستوى | المعنى |
+|---|---|
+| `document_read` | نص القرار الرسمي (PDF) قُرئ، والتاريخ والنطاق مأخوذان منه |
+| `official_summary` | التاريخ مأخوذ من مستند رسمي للمصلحة يذكر القرار، لا من نص القرار نفسه |
+| `listing_only` | القرار مثبت في صفحة المصلحة الرسمية مع رابط ملفه، لكن نصه لم يُقرأ بعد؛ لذلك لا يُسجَّل له تاريخ سريان |
+| `referenced` | قرار أساسي مذكور داخل قرارات أخرى، ونصه لم يُسترجع بعد |
+
+قاعدة صارمة يفرضها المدقق: **لا صف يحمل تاريخ سريان إلا إذا كان مستواه `document_read` أو `official_summary`.** أي حقل لم يُتحقق منه يبقى `null`، ولا يُخمَّن أبدًا.
+
+## جدول المراحل (الفاتورة الإلكترونية)
+
+| القرار | النطاق | تاريخ السريان |
+|---|---|---|
+| 386/2020 | 134 شركة – المرحلة الأولى | 2020-11-15 |
+| 518/2020 | 347 شركة – المرحلة الثانية | 2021-02-15 |
+| 85/2021 | الشركات المسجلة بمركز كبار الممولين | 2021-05-15 |
+| 195/2021 | مركز متوسطي الممولين وكبار المهن الحرة (مدينة نصر) | 2021-09-15 |
+| 443/2021 | المجموعة الأولى – شركات هيئة الاستثمار بالقاهرة (373 شركة) | 2021-12-15 |
+| 619/2021 | المجموعة الثانية – شركات هيئة الاستثمار بالقاهرة | 2022-02-15 |
+| 208/2022 | شركات القاهرة والجيزة والقليوبية | 2022-06-15 |
+| 323/2022 | المرحلة الثامنة – جدول المحافظات (أربع مراحل فرعية) | 2022-09-15 … 2022-12-15 |
+
+جدول 323/2022 بالتفصيل موجود في `effective_schedule` داخل الصف نفسه.
+
+## استخدام البيانات
+
+```bash
+# كل القرارات التي دخلت حيز التنفيذ قبل تاريخ معين
+jq '[.decisions[] | select(.effective_from != null and .effective_from < "2022-01-01") | {id, effective_from, title_ar}]' data/decisions.json
+
+# القرارات التي تحتاج تحققًا (لم يُقرأ نصها بعد)
+jq -r '.decisions[] | select(.verification.level == "listing_only") | .title_ar' data/decisions.json
+
+# الروابط الرسمية
+jq -r '.sources[] | "\(.id)\t\(.url)"' data/decisions.json
+```
+
+`data/decisions.csv` هو نفس المحتوى بصيغة جدولية، ويُبنى من JSON بـ `npm run build:csv` (الاختبارات تفشل إذا كان الملف غير متزامن).
+
+## بنية المشروع
+
+```
+data/decisions.json     البيانات (المصدر الأساسي)
+data/decisions.csv      نفس البيانات للجداول
+schema/decision.schema.json   مخطط JSON Schema للصف والملف
+scripts/validate.mjs    المدقق: يفرض قواعد المصدر والتاريخ ومستويات التحقق
+scripts/build-csv.mjs   بناء CSV والتحقق من تزامنه
+docs/METHODOLOGY.md     معايير الإدراج والتحقق وحدود البيانات
+docs/SOURCES.md         صفحات المصدر الرسمية
+test/dataset.test.js    اختبارات على البيانات نفسها
+```
+
+## التحقق والتشغيل
+
+```bash
+npm run validate     # قواعد البيانات: مصادر رسمية، تواريخ ISO، لا تخمين
+npm test             # الاختبارات (6)
+npm run build:csv    # إعادة بناء CSV
+```
+
+المدقق يرفض: صفًا بلا مصدر، رابطًا خارج eta.gov.eg، تاريخًا بصيغة غير ISO، `effective_from` قبل `issued_on`، معرّفًا مكررًا، أو صفًا `listing_only` يحمل تاريخ سريان.
+
+## كيف تساهم أو تصحّح خطأ
+
+افتح Issue بعنوان القرار ورقمه، مع الرابط الرسمي الذي يثبت التصحيح. أي تصحيح يُدخل كمصدر جديد في `sources` ثم يُحدَّث الصف ومستوى تحققه. لا تُضاف تفسيرات أو فتاوى أو تقديرات، فقط ما ينص عليه المستند الرسمي. التفاصيل في [CONTRIBUTING.md](CONTRIBUTING.md) و[docs/METHODOLOGY.md](docs/METHODOLOGY.md).
+
+## القيود المعروفة
+
+- 20 قرارًا من قرارات الإيصال الإلكتروني مثبتة بالرابط الرسمي لكن نصها لم يُقرأ بعد، فلا تاريخ سريان لها في البيانات.
+- قرار 188/2020 (وزير المالية) مذكور كأساس في قرارات أخرى ولم يُسترجع نصه بعد.
+- التغطية تعكس صفحتي القرارات الرسميتين في 2026-11-27؛ أي قرار يُنشر بعد ذلك غير مشمول.
+- العناوين العربية لقرارات الإيصال الإلكتروني منقولة كما وردت في صفحة المصلحة؛ الترجمة الإنجليزية غير متوفرة لها بعد (`title_en: null`).
+- نصوص القرارات نفسها ملك لجهات إصدارها؛ هذا المشروع يوثّقها ويشير إليها ولا يعيد نشرها.
+
+## الترخيص
+
+- الكود والسكربتات: MIT — [LICENSE](LICENSE).
+- البيانات (الحقائق المجمّعة والتوصيفات التي كتبناها): CC BY 4.0 — [DATA_LICENSE.md](DATA_LICENSE.md).
+
+## English summary
+
+A machine-readable dataset of ETA e-invoice and e-receipt mandate decisions: decision number, year, issuer, scope, effective date and the official source URL for each row, plus a `verification.level` that states exactly how each field was established. 32 rows compiled on 2026-11-27 from ETA's two official decision pages. Rows never carry a date that was not read from an official document; unverified fields stay null. `npm run validate` enforces this. MIT for code, CC BY 4.0 for the data. Not tax or legal advice.
