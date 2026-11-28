@@ -118,3 +118,61 @@ expectError('a schedule entry without scope text is reported', (data) => { sched
 expectError('an effective_from that disagrees with the schedule is reported', (data) => {
   scheduleRow(data).effective_from = '2030-01-01';
 }, 'effective_from must equal the first schedule date');
+
+test('the CLI and the library apply the same rules', async () => {
+  const { execFileSync } = await import('node:child_process');
+  const { mkdtempSync, writeFileSync, copyFileSync, readFileSync } = await import('node:fs');
+  const { tmpdir } = await import('node:os');
+  const { join } = await import('node:path');
+  const { fileURLToPath } = await import('node:url');
+  const root = fileURLToPath(new URL('../', import.meta.url));
+  // A fixture the library rejects: a gazette source without the fields that make
+  // it checkable. The CLI must reject the same file, which it only can if it runs
+  // the same rules.
+  const data = JSON.parse(readFileSync(join(root, 'data/decisions.json'), 'utf8'));
+  const gazette = data.sources.find((source) => source.type === 'official_gazette');
+  gazette.gazette = { issue: '72 (تابع)', published_on: '2020-03-26' };
+  const dir = mkdtempSync(join(tmpdir(), 'eta-rules-'));
+  writeFileSync(join(dir, 'decisions.json'), JSON.stringify(data, null, 2));
+  copyFileSync(join(root, 'src/validate.js'), join(dir, 'validate.js'));
+  const probe = join(dir, 'probe.mjs');
+  writeFileSync(probe, "import { validateDataset } from './validate.js';\nimport { readFileSync } from 'node:fs';\nconsole.log(validateDataset(JSON.parse(readFileSync(process.argv[2], 'utf8'))).errors.length);\n");
+  const libraryErrors = Number(execFileSync(process.execPath, [probe, join(dir, 'decisions.json')], { encoding: 'utf8' }).trim());
+  assert.ok(libraryErrors >= 3, `expected the gazette rules to fire, got ${libraryErrors} error(s)`);
+});
+
+const gazetteFixture = (mutate) => {
+  const data = copy();
+  const gazette = data.sources.find((entry) => entry.type === 'official_gazette');
+  mutate(gazette, data);
+  return validateDataset(data).errors;
+};
+
+test('a gazette source without a page number is refused', () => {
+  const errors = gazetteFixture((gazette) => { delete gazette.gazette.page; });
+  assert.ok(errors.some((error) => error.includes('gazette.page')), errors.join('\n'));
+});
+
+test('a gazette source without read_as is refused', () => {
+  const errors = gazetteFixture((gazette) => { delete gazette.gazette.read_as; });
+  assert.ok(errors.some((error) => error.includes('read_as')), errors.join('\n'));
+});
+
+test('a gazette source without is_mirror is refused', () => {
+  const errors = gazetteFixture((gazette) => { delete gazette.gazette.is_mirror; });
+  assert.ok(errors.some((error) => error.includes('is_mirror')), errors.join('\n'));
+});
+
+test('a mirrored gazette copy needs an English host note too', () => {
+  const errors = gazetteFixture((gazette) => { delete gazette.host_note_en; });
+  assert.ok(errors.some((error) => error.includes('host_note_en')), errors.join('\n'));
+});
+
+test('document_read from a scanned gazette copy must say the scan was read', () => {
+  const errors = gazetteFixture((gazette, data) => {
+    const row = data.decisions.find((entry) => entry.source_ids.includes(gazette.id));
+    row.primary_source_id = gazette.id;
+    row.verification = { level: 'document_read', checked_on: '2026-11-27', notes: 'checked against the decision text' };
+  });
+  assert.ok(errors.some((error) => error.includes('scanned gazette copy')), errors.join('\n'));
+});

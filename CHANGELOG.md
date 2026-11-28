@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.11.0
+
+- `official_gazette` sources now have to be checkable before they can be used.
+  The record must carry `gazette.page` (where the decision text starts),
+  `gazette.read_as` (`text` or `scan`) and `gazette.is_mirror`, and a mirror
+  needs its host note in English as well as Arabic. A row that claims
+  `document_read` from a scanned gazette copy must say in `verification.notes`
+  that the scan was read and transcribed.
+- `docs/SOURCES.md` states the requirement in full, and why `is_mirror` exists:
+  the Official Gazette has no public portal serving these issues, so copies sit
+  with other publishers, and saying so is the point rather than an exception.
+- The validator rules are no longer duplicated: `scripts/validate.mjs` imports
+  `src/validate.js`, and a test fails if the CLI and the library disagree on a
+  broken fixture. The duplicated copy is how a rule gets tightened in one place
+  and left loose in the other.
+- The existing 188/2020 gazette record gains its page, read mode and mirror flag
+  from what the record already said in prose.
+
 ## 0.10.7
 
 - STATUS.md: three claims corrected after checking them against the tests rather

@@ -53,10 +53,27 @@ export function validateDataset(data) {
       // may live on another host, but it must name the issue and its date and say
       // in the record that it is a copy.
       if (source.type === 'official_gazette') {
-        if (!source.gazette || typeof source.gazette.issue !== 'string' || source.gazette.issue.trim() === '') {
+        const gazette = source.gazette ?? {};
+        if (typeof gazette.issue !== 'string' || gazette.issue.trim() === '') {
           fail(at, 'official_gazette needs gazette.issue');
         }
-        if (!isDate(source.gazette?.published_on)) fail(at, 'official_gazette needs gazette.published_on as an ISO date');
+        if (!isDate(gazette.published_on)) fail(at, 'official_gazette needs gazette.published_on as an ISO date');
+        // The four fields below are what make a gazette citation checkable by a
+        // reader who has the printed issue in front of them: which page the text
+        // starts on, whether the text was read as text or as a scan, and whether
+        // the file is the official publication or somebody's copy of it.
+        if (!Number.isInteger(gazette.page) || gazette.page < 1) {
+          fail(at, 'official_gazette needs gazette.page as a positive integer (the page the decision text starts on)');
+        }
+        if (!['text', 'scan'].includes(gazette.read_as)) {
+          fail(at, "official_gazette needs gazette.read_as of 'text' or 'scan'");
+        }
+        if (typeof gazette.is_mirror !== 'boolean') {
+          fail(at, 'official_gazette needs gazette.is_mirror as true or false');
+        }
+        if (gazette.is_mirror === true && (typeof source.host_note_en !== 'string' || source.host_note_en.trim() === '')) {
+          fail(at, 'a mirrored gazette copy needs host_note_en as well as host_note_ar, saying whose copy it is');
+        }
         if (typeof source.host_note_ar !== 'string' || source.host_note_ar.trim() === '') {
           fail(at, 'official_gazette needs host_note_ar explaining where the copy is hosted');
         }
@@ -124,7 +141,17 @@ export function validateDataset(data) {
       fail(at, 'listing_only/referenced rows must not carry an effective_from date');
     }
 
-    if (row.effective_schedule !== undefined) {
+    // A row that claims the text was read, when its primary source is a scanned
+  // gazette copy, has to say in its own notes that the scan was read and the text
+  // transcribed. Otherwise "document_read" is doing work nobody can check.
+  const primary = (data.sources ?? []).find((source) => source.id === row.primary_source_id);
+  if (primary?.type === 'official_gazette' && primary.gazette?.read_as === 'scan' && verification.level === 'document_read') {
+    if (!/scan|image|صورة|ممسوح|نسخة/i.test(verification.notes ?? '')) {
+      fail(at, 'document_read from a scanned gazette copy must say in verification.notes that the scan was read');
+    }
+  }
+
+  if (row.effective_schedule !== undefined) {
       if (!Array.isArray(row.effective_schedule) || row.effective_schedule.length === 0) {
         fail(at, 'effective_schedule must be a non-empty array when present');
       } else {

@@ -329,7 +329,10 @@
       "retrieved_on": "2026-11-27",
       "gazette": {
         "issue": "72 (تابع)",
-        "published_on": "2020-03-26"
+        "published_on": "2020-03-26",
+        "page": 2,
+        "read_as": "scan",
+        "is_mirror": true
       },
       "host_note_ar": "نسخة مصورة من عدد الوقائع المصرية نفسه منشورة على موقع الوطن (elwatannews.com) وليست على موقع المصلحة؛ نص القرار في الصفحة 2 من العدد.",
       "host_note_en": "A scan of the Official Gazette issue itself, hosted by elwatannews.com rather than by ETA. The decision text is on page 2."
