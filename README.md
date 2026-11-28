@@ -1,5 +1,7 @@
 # eta-einvoice-decisions
 
+**الحالة الحالية:** [STATUS.md](STATUS.md) — ما تم التحقق منه، ومن راجعه، وما لم يُتحقق منه بعد.
+
 قرارات مصلحة الضرائب المصرية في منظومتي الفاتورة الإلكترونية والإيصال الإلكتروني، كبيانات منظمة: رقم القرار وسنته وجهة إصداره ونطاقه وتاريخ سريانه ورابط مصدره الرسمي.
 A dated, sourced dataset of Egyptian Tax Authority e-invoice and e-receipt decisions.
 
