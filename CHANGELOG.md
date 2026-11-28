@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.11.1
+
+- `docs/RELEASE_NOTES_DRAFT.md` had a claim the repository does not support: it
+  said the coverage table is verified automatically against the data. It is not;
+  only the timeline is. Corrected, because these notes become the release body.
+- The same notes now describe the 188/2020 gazette record precisely: issue, date,
+  page, read mode and the fact that the file is a copy hosted elsewhere.
+
 ## 0.11.0
 
 - `official_gazette` sources now have to be checkable before they can be used.

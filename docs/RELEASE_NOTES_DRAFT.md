@@ -10,7 +10,7 @@ A dated, sourced dataset of Egyptian Tax Authority e-invoice and e-receipt decis
 
 - **The dataset** — `data/decisions.json`, with a JSON schema, a validator that enforces source and date rules, and a CSV generator.
 - **Verification levels** — `document_read` for every row today. The schema also carries `listing_only`, `official_summary` and `referenced` so an unread decision can never masquerade as a read one.
-- **Coverage table** — `docs/COVERAGE.md` maps each official file on the Authority's two decision pages to its row, verified automatically: no file without a row, no row without a source.
+- **Coverage table** — `docs/COVERAGE.md` maps each official file on the Authority's two decision pages to its row. It is written by hand from the same read and is **not** checked against the data by a test; the timeline is.
 - **Timeline** — `docs/TIMELINE.md`, generated from the data and checked so it cannot drift.
 - **Glossary** — every field and repeating term in Arabic, with the note that the decision text wins over any summary here.
 - **CLI** — `list` with filters, `show <id>`, `stats`, `--json` and `--lang ar|en`.
@@ -20,7 +20,7 @@ A dated, sourced dataset of Egyptian Tax Authority e-invoice and e-receipt decis
 - **It is not tax or legal advice.** It is a reference to what the decisions say, for someone who will then read the decision.
 - It does not claim completeness. It covers the two official decision pages as read on 27 November 2026, and nothing else.
 - Dates are only as good as the document: where a decision prints no issue date, the field is empty rather than guessed, and one row's schedule comes from the decision's own table.
-- One decision (188/2020) is recorded from a copy of the Official Gazette issue; the row says so.
+- One decision (188/2020) is recorded from a copy of the Official Gazette issue, and the record says so: issue 72 (تابع), published 26 March 2020, text on page 2, read as a scan, hosted by another publisher rather than by the Authority. A gazette source without its issue, date, page, read mode and mirror flag is refused by the validator, so this one cannot drift into looking like an Authority file.
 - It is not affiliated with, endorsed by or connected to the Egyptian Tax Authority.
 
 ## Use
