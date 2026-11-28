@@ -1,13 +1,13 @@
 # Where this stands
 
-As of 28 November 2026. Version 0.10.6. **No tag, no release, no visibility change.**
+As of 28 November 2026. Version 0.10.7. **No tag, no release, no visibility change.**
 
 ## Verified, and how
 
 - The suite passes locally and in CI on Node 20, 22 and 24 (CI run 46084556847 on commit e2ed1611). The CI log carries the count.
 - `npm run validate` enforces the rule the dataset exists for: every row has a source, every row states a `verification.level`, and no date appears that was not read from an official document.
-- The generated CSV is checked against the JSON, so the two cannot drift.
-- Coverage is pinned to the two official Authority listing pages as read on 27 November 2026; a test fails if the coverage table and the data disagree.
+- The committed CSV is checked against the JSON by a test, so the two cannot drift.
+- `docs/TIMELINE.md` is checked against the data by a test. `docs/COVERAGE.md` is written by hand from the same read of the two official listing pages on 27 November 2026 and is **not** test-checked against the data.
 - One official file was damaged on the Authority's own site (PDF ending in an HTML page); it was repaired locally, its text extracted, and the row's `notes` say so rather than hiding it.
 
 ## Reviewed by a person
